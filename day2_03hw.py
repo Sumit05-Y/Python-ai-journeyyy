@@ -1,0 +1,15 @@
+#BUILD A USD CURRENCY CONVERTER . USER ENTERS AN AMOUNT IN USD. PRINT 
+#THE EQUIVALENT IN NRS , EUR AND GBP.
+# USE ALL_CAPS FOR YOUR EXCHANGE RATE CONSTANTS. FORMAT THE OUTPUT WITH COMMA SEPARATORS AND 2 DECIMAL PLACES
+#$1 USD NPR 154.66. , $1 USD €0.86 EUR. , $1 USD £0.74 GBP
+
+usd=float(input("Enter usd dollars needed to convert:"))
+CONVNPR=usd * 154.66
+CONVEUR=usd * 0.86
+CONVGBP=usd * 0.74
+print(f"The equivalent NPR is {CONVNPR:,.2f}")
+print(f"The equivalent EUR is {CONVEUR:,.2f}")
+print(f"The equivalent GBP is {CONVGBP:,.2f}")
+
+
+
