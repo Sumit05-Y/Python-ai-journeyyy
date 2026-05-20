@@ -1,4 +1,2 @@
 # Python-ai-journeyyy
-test
-hello
- print
+Hi !! This is me Sumit Sah ,learning python for further exploration in AI.
