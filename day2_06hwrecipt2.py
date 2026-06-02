@@ -6,7 +6,6 @@ price = []
 for i in range(n):
     item_name = input("Enter item name: ")
     item_price = float(input("Enter item price: "))
-
     name.append(item_name)
     price.append(item_price)
 
