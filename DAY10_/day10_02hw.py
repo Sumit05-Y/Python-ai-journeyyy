@@ -1,4 +1,8 @@
-cart = []
+cart = [
+    {"name": "rice", "price": 100},
+    {"name": "daal", "price": 200},
+    {"name": "bhat", "price": 150},
+    {"name": "bhat", "price": 150},{"name": "daal", "price": 200},]
 
 
 def show_cart():
@@ -52,16 +56,44 @@ def remove_item():
 
     except ValueError:
         print("Please enter a valid number.")
+def search_item():
+    query=input("Enter the item to be searched:\n")
+    query1=query.lower()
+    result=[item for item in cart if query1 in item['name'].lower()]
+    if result:
+        print(f"{query} FOUNDED")
+        for item in result:
+            print(f"{item['name']:<15}{item['price']:>6.2f}")
+    else:
+        print(f"{query} NOT FOUND")
+def duplicate_item():
+    names=[item['name'].lower() for item in cart]
+    seen = set()
+    duplicate = set()
+    for name in names:
+        if name in seen:
+            duplicate.add(name)
+        seen.add(name)
+    if duplicate:
+        print(f"Duplicated item:\n{','.join(duplicate)}")
+    else:
+        print(f"No duplicate item.")
+
+
+
 
 
 def main():
+    
     print("--------- SHOPPING CART ---------")
 
     while True:
         print("\n1. View Cart")
         print("2. Add Item")
         print("3. Remove Item")
-        print("4. Exit")
+        print("4. TO SEARCH")
+        print("5. DUPLICATE ITEM")
+        print("6. Exit")
 
         try:
             choice = int(input("Enter your choice: "))
@@ -76,6 +108,13 @@ def main():
                 remove_item()
 
             elif choice == 4:
+                search_item()
+
+            elif choice == 5:
+                duplicate_item()
+
+
+            elif choice == 6:
                 print("Thank you for shopping!")
                 break
 
