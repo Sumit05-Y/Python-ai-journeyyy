@@ -79,6 +79,26 @@ def duplicate_item():
     else:
         print(f"No duplicate item.")
 
+def sort_item(by="name"):
+    if not cart:
+        print(f"The cart is empty nothing to sort!")
+    if by == "name":
+        cart.sort(key = lambda item: item['name'].lower())
+        print("ITEM SORTED BY NAME")
+        show_cart()
+    elif by == "price":
+        cart.sort(key = lambda item : item['price'])
+        print("ITEM SORTED BY PRICE")
+        show_cart()
+def stats_():
+    if not cart:
+        return
+    prices=[item['price'] for item in cart]
+    print(f"no of items: {len(cart)}")
+    print(f"Total : {sum(prices):.2f}")
+    print(f"Average : {sum(prices)/len(cart):.2f}")
+    
+
 
 
 
@@ -93,7 +113,10 @@ def main():
         print("3. Remove Item")
         print("4. TO SEARCH")
         print("5. DUPLICATE ITEM")
-        print("6. Exit")
+        print("6. SORT ITEM BY NAME")
+        print("7. SORT ITEM BY PRICE")
+        print("8. Statistics")
+        print("9. Exit")
 
         try:
             choice = int(input("Enter your choice: "))
@@ -112,9 +135,17 @@ def main():
 
             elif choice == 5:
                 duplicate_item()
-
-
+            
             elif choice == 6:
+                sort_item("name")
+            elif choice == 7:
+                sort_item("price")
+            
+            elif choice == 8:
+                stats_()
+
+
+            elif choice == 9:
                 print("Thank you for shopping!")
                 break
 
