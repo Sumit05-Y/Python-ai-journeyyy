@@ -11,21 +11,33 @@ def add_student(name, math, english, science):
     print("Student added!")
 
 def get_average(student):
-    return (student["math"] + student["english"] + student["science"]) / 3
+    marks_avg=(student["math"] + student["english"] + student["science"])/3
+    return marks_avg
 
 def find_top_student():
-    top = students[0]
+    student1 = []
 
     for student in students:
-        if get_average(student) > get_average(top):
-            top = student
+        student1.append(get_average(student))
 
-    print("Top Student:", top["name"])
-    print("Average:", round(get_average(top), 2))
+    top_marks = max(student1)
+    index_pointer = student1.index(top_marks)
+
+    print(students[index_pointer])
+    print(top_marks)
+    
 
 def view_students():
+    print(f'{"NAME":<15}{"ENGLISH":<10}{"MATHS":<10}{"SCIENCE":<10}{"AVERAGE":<10}')
+
     for student in students:
-        print(student["name"], "-", round(get_average(student), 2))
+        print(
+            f'{student["name"]:<15}'
+            f'{student["english"]:<10}'
+            f'{student["math"]:<10}'
+            f'{student["science"]:<10}'
+            f'{get_average(student):<10.2f}'
+        )
 
 def high_scorers():
     high = {}
@@ -38,7 +50,6 @@ def high_scorers():
     print(high)
 
 
-# some starting data
 add_student("Ram", 85, 90, 80)
 add_student("Sita", 95, 92, 88)
 add_student("Hari", 70, 75, 78)
