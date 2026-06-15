@@ -5,17 +5,10 @@ def counter_factory():
         nonlocal count
         count += 1
         return count
-
+    print(count)
     return counter
+choice = input("Enter \n 1. for increment \n 2. for exit ")
 
+if choice == "1":
+    counter_factory()
 
-counter1 = counter_factory()
-
-print(counter1())
-print(counter1())
-print(counter1())
-
-counter2 = counter_factory()
-
-print(counter2())
-print(counter2())
