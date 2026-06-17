@@ -1,0 +1,29 @@
+-----Average marks------
+Ram : 85.00
+-----Average marks------
+Sita : 91.67
+-----Average marks------
+Hari : 74.33
+-----Average marks------
+Geeta : 84.00
+-----Average marks------
+Ram : 85.00
+-----Average marks------
+Sita : 91.67
+-----Average marks------
+Hari : 74.33
+-----Average marks------
+Geeta : 84.00
+----Top student-----
+{'name': 'Sita', 'math': 95, 'english': 92, 'science': 88}
+91.66666666666667
+-----Average marks------
+Ram : 85.00
+-----Average marks------
+Sita : 91.67
+-----Average marks------
+Hari : 74.33
+-----Average marks------
+Geeta : 84.00
+----High score-----
+{'Ram': 85.0, 'Sita': 91.67, 'Geeta': 84.0}

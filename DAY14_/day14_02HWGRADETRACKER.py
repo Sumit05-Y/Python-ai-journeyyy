@@ -1,5 +1,6 @@
 students = []
 
+
 def add_student(name, math, english, science):
     student = {
         "name": name,
@@ -10,22 +11,38 @@ def add_student(name, math, english, science):
     students.append(student)
     print("Student added!")
 
+
 def get_average(student):
-    marks_avg=(student["math"] + student["english"] + student["science"])/3
+    marks_avg = (
+        student["math"] +
+        student["english"] +
+        student["science"]
+    ) / 3
+
+    with open("grade.txt", "a") as f:
+        f.write("-----Average marks------\n")
+        f.write(f"{student['name']} : {marks_avg:.2f}\n")
+
     return marks_avg
 
+
 def find_top_student():
-    student1 = []
+    with open("grade.txt", "a") as f:
+        student1 = []
 
-    for student in students:
-        student1.append(get_average(student))
+        for student in students:
+            student1.append(get_average(student))
 
-    top_marks = max(student1)
-    index_pointer = student1.index(top_marks)
+        top_marks = max(student1)
+        index_pointer = student1.index(top_marks)
 
-    print(students[index_pointer])
-    print(top_marks)
-    
+        print(students[index_pointer])
+        print(top_marks)
+
+        f.write("----Top student-----\n")
+        f.write(f"{students[index_pointer]}\n")
+        f.write(f"{top_marks}\n")
+
 
 def view_students():
     print(f'{"NAME":<15}{"ENGLISH":<10}{"MATHS":<10}{"SCIENCE":<10}{"AVERAGE":<10}')
@@ -39,15 +56,20 @@ def view_students():
             f'{get_average(student):<10.2f}'
         )
 
+
 def high_scorers():
-    high = {}
+    with open("grade.txt", "a") as f:
+        high = {}
 
-    for student in students:
-        avg = get_average(student)
-        if avg > 80:
-            high[student["name"]] = round(avg, 2)
+        for student in students:
+            avg = get_average(student)
+            if avg > 80:
+                high[student["name"]] = round(avg, 2)
 
-    print(high)
+        print(high)
+
+        f.write("----High score-----\n")
+        f.write(f"{high}\n")
 
 
 add_student("Ram", 85, 90, 80)
