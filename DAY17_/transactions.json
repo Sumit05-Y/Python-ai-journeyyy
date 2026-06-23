@@ -3,30 +3,6 @@
     "description": "Groceries",
     "amount": 45.5,
     "category": "food",
-    "date": "2026-06-21T11:27:10.496734"
-  },
-  {
-    "description": "Gas",
-    "amount": 60.0,
-    "category": "transport",
-    "date": "2026-06-21T11:27:10.496744"
-  },
-  {
-    "description": "Groceries",
-    "amount": 45.5,
-    "category": "food",
-    "date": "2026-06-21T11:27:48.001720"
-  },
-  {
-    "description": "Gas",
-    "amount": 60.0,
-    "category": "transport",
-    "date": "2026-06-21T11:27:48.001728"
-  },
-  {
-    "description": "Groceries",
-    "amount": 45.5,
-    "category": "food",
     "date": "2026-06-22T15:50:41.647773"
   },
   {
@@ -34,5 +10,11 @@
     "amount": 60.0,
     "category": "transport",
     "date": "2026-06-22T15:50:41.647779"
+  },
+  {
+    "description": "Momo",
+    "amount": 120.0,
+    "category": "food",
+    "date": "2026-06-23T12:38:18.821595"
   }
 ]
