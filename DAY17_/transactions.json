@@ -16,5 +16,17 @@
     "amount": 120.0,
     "category": "food",
     "date": "2026-06-23T12:38:18.821595"
+  },
+  {
+    "description": "Bus",
+    "amount": 20.0,
+    "category": "transport",
+    "date": "2026-06-23T14:47:33.837242"
+  },
+  {
+    "description": "coffee",
+    "amount": 120.0,
+    "category": "Drinks",
+    "date": "2026-06-23T14:53:17.817783"
   }
 ]
