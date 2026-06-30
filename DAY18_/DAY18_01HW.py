@@ -27,3 +27,17 @@ class Task:
     def __str__(self):
         marker = "✓" if self.status == "Complete" else " "
         return f"[{marker}] {self.title} (Due: {self.due_date or 'N/A'}) — {self.priority}"
+    
+    class TaskManager:
+
+
+        def __init__(self):
+            self.tasks = []
+
+        def add_task(self, title, description="", due_date="", priority="Medium"):
+            task = Task(title, description, due_date, priority)
+            self.tasks.append(task)
+            print(f"  Added: {task.title}")
+            return task
+
+   
