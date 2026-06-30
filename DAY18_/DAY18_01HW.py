@@ -40,4 +40,15 @@ class Task:
             print(f"  Added: {task.title}")
             return task
 
-   
+        def view_all(self):
+            if not self.tasks:
+                print("\n  No tasks yet.")
+                return
+            print("\n  --- All Tasks ---")
+            for i, task in enumerate(self.tasks, 1):
+                print(f"  {i}. {task}")
+
+        def view_by_status(self, status):
+            filtered = [t for t in self.tasks if t.status.lower() == status.lower()]
+            for i, task in enumerate(filtered, 1):
+                print(f"  {i}. {task}")
