@@ -1,0 +1,23 @@
+[
+  {
+    "title": "English homework",
+    "description": "",
+    "due_date": "2026-02-05",
+    "priority": "High",
+    "status": "Pending"
+  },
+  {
+    "title": "Science Homework",
+    "description": "",
+    "due_date": "2026-07-08",
+    "priority": "Low",
+    "status": "Complete"
+  },
+  {
+    "title": "Maths Homework",
+    "description": "",
+    "due_date": "2026-07-05",
+    "priority": "High",
+    "status": "Pending"
+  }
+]
